@@ -133,3 +133,40 @@ const renderPoke = (array) => {
     li.append(img);
   });
 };
+
+// Skapa funktionalitet för att lägga till pokemons med ny data
+
+{/* <input type="text" placeholder="name" id="pokeName">
+<input type="number" placeholder="height" id="pokeHeight">
+<input type="number" placeholder="weight" id="pokeWeight">
+<input type="text" placeholder="url" id="pokePic"> */}
+
+const addBtn = document.querySelector("#addBtn"); 
+
+addBtn.addEventListener("click", () => {
+
+const pokeName = document.querySelector("#pokeName").value; 
+const pokeHeight = document.querySelector("#pokeHeight").value; 
+const pokeWeight = document.querySelector("#pokeWeight").value; 
+const pokePic = document.querySelector("#pokePic").value; 
+const pokeType = document.querySelector("#pokeType").value; 
+
+
+  let newPokemon = {
+    name: pokeName,
+    height: pokeHeight,
+    weight: pokeWeight,
+    type: pokeType,
+    url: pokePic
+  }
+
+  if (newPokemon.url === "") {
+    newPokemon.url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png";
+  }
+
+  PokedexData.push(newPokemon); 
+
+  alert("Pokemon added!"); 
+
+
+})
