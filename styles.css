@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 h1 {
-  text-decoration: underline;
+  font-family: "Press Start 2P";
+  color: darkblue; 
+}
+
+.inputText {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: 0px; 
+  height: 30px; 
+  padding: 10px; 
+  padding-left: 20px; 
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.inputText:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+.inputText::placeholder {
+  color: white; 
+}
+
+#addBtn {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: none; 
+  height: 40px;
+  padding: 20px; 
+  margin-top: 0px; 
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px; 
+}
+
+#addBtn:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+#pokeType {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: none; 
+  height: 40px;
+  padding: 20px; 
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+#pokeType:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+h2 {
+
+  font-family: 'Courier New', Courier, monospace;
+  color: darkorange; 
+  text-decoration: wavy overline;
+  background-color: antiquewhite;
 }
