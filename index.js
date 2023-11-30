@@ -104,7 +104,24 @@ const pokeList = document.querySelector("#pokeList");
 
 pokeBtn.addEventListener("click", () => {
   pokeList.innerHTML = "";
-  PokedexData.forEach((pokemon) => {
+
+const checkboxes = document.querySelectorAll("[name='type']:checked")
+// console.log(checkboxes);
+let selectedPoke = []
+checkboxes.forEach((box) => {
+  selectedPoke.push(box.value);
+});
+
+let filteredPoke = PokedexData.filter((item) => {
+  if (selectedPoke.includes(item.type) || selectedPoke.includes("all")) {
+    return item;
+  }
+});
+  renderPoke(filteredPoke);
+});
+
+const renderPoke = (array) => {
+  array.forEach((pokemon) => {
     let li = document.createElement("li");
     li.innerText = `Name: ${pokemon.name}
         Height: ${pokemon.height}
@@ -115,4 +132,4 @@ pokeBtn.addEventListener("click", () => {
     pokeList.append(li);
     li.append(img);
   });
-});
+};
