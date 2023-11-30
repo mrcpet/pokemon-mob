@@ -1,9 +1,17 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  height: 100vh;
+  background: rgb(10,40,95);
+  background: linear-gradient(180deg, rgba(10,40,95,0.8532763532763533) 0%, rgba(0,117,190,0.8575498575498576) 15%, rgba(213,161,0,0.8532763532763533) 83%);
+
 
 h1 {
   font-family: "Press Start 2P";
   color: darkblue; 
 }
+
 
 .inputText {
   border-radius: 20px;
@@ -65,4 +73,32 @@ h2 {
   color: darkorange; 
   text-decoration: wavy overline;
   background-color: antiquewhite;
+}
+
+.pokeBtn {
+  background-color: rgb(10,40,95);
+  border: none;
+  color: #FFCC00;
+  font-weight: 600;
+  border-radius: 15%;
+  padding: 5px;
+}
+
+.pokeBtn:hover {
+  cursor: pointer;
+  background-color: #FFCC00;
+  color: rgb(10,40,95);
+}
+
+input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+}
+
+input:checked {
+  outline: 2px solid #FFCC00;
+}
+
+label {
+  font-size: 18px;
 }
