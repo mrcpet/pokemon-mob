@@ -98,3 +98,21 @@ const PokedexData = [
     url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png",
   },
 ];
+
+const pokeBtn = document.querySelector("#pokeBtn");
+const pokeList = document.querySelector("#pokeList");
+
+pokeBtn.addEventListener("click", () => {
+  pokeList.innerHTML = "";
+  PokedexData.forEach((pokemon) => {
+    let li = document.createElement("li");
+    li.innerText = `Name: ${pokemon.name}
+        Height: ${pokemon.height}
+        Weight: ${pokemon.weight}
+        Type: ${pokemon.type} \n`;
+    let img = document.createElement("img");
+    img.setAttribute("src", pokemon.url);
+    pokeList.append(li);
+    li.append(img);
+  });
+});
