@@ -169,8 +169,6 @@ const renderPoke = (array) => {
 
 const addBtn = document.querySelector("#addBtn");
 
-const addBtn = document.querySelector("#addBtn"); 
-
 addBtn.addEventListener("click", () => {
   const pokeName = document.querySelector("#pokeName").value;
   const pokeHeight = document.querySelector("#pokeHeight").value;
