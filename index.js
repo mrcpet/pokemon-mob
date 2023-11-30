@@ -159,6 +159,7 @@ const renderPoke = (array) => {
 
 // Skapa funktionalitet för att lägga till pokemons med ny data
 
+
 {
   /* <input type="text" placeholder="name" id="pokeName">
 <input type="number" placeholder="height" id="pokeHeight">
@@ -167,6 +168,8 @@ const renderPoke = (array) => {
 }
 
 const addBtn = document.querySelector("#addBtn");
+
+const addBtn = document.querySelector("#addBtn"); 
 
 addBtn.addEventListener("click", () => {
   const pokeName = document.querySelector("#pokeName").value;

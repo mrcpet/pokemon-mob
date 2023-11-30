@@ -7,11 +7,13 @@
     <title>HTML + CSS</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
+    <link rel="shortcut icon" href="pokeball.png" type="image/x-icon" />
   </head>
 
   <body>
-    <h1>Pokemon application</h1>
+    <h1>Pokemon application :)</h1>
     <button id="pokeBtn">Show Pokemon</button>
+
     <input type="checkbox" name="type" id="all" value="all" />
     <label for="all">All</label>
     <input type="checkbox" name="type" id="grass" value="grass" />
@@ -26,12 +28,13 @@
     <label for="water">Water</label>
     <input type="checkbox" name="type" id="normal" value="normal" />
     <label for="normal">Normal</label>
+    <button id="pokeBtn" class="pokeBtn">Show Pokemon</button>
     <h2>Våra pokemons</h2>
+    
+    <input type="text" placeholder="name" id="pokeName" class="inputText">
+    <input type="number" placeholder="height" id="pokeHeight" class="inputText"><br><br>
+    <input type="number" placeholder="weight" id="pokeWeight" class="inputText">
 
-    <input type="text" placeholder="name" id="pokeName">
-    <input type="number" placeholder="height" id="pokeHeight">
-    <input type="number" placeholder="weight" id="pokeWeight">
-    <input type="text" placeholder="url" id="pokePic">
     <select id="pokeType">
       <option disabled selected></option>
       <option value="grass">Grass</option>
@@ -44,6 +47,5 @@
 
     <button id="addBtn">Add Pokemon</button>
     <ul id="pokeList"></ul>
-
   </body>
 </html>
