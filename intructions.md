@@ -11,8 +11,7 @@ OBS! Mobbprogrammering (1 person skriver, 2 personer tänker).
 
 4. Nästa person som skriver, drar ner de senaste ändringarna från main/master till sin branch och forsätter koda.
 
----
-
+--
 UPPGIFTBESKRIVNING
 
 1. Visa ut samtliga pokemon och deras data på sidan.

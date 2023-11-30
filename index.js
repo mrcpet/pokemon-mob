@@ -105,18 +105,18 @@ const pokeList = document.querySelector("#pokeList");
 pokeBtn.addEventListener("click", () => {
   pokeList.innerHTML = "";
 
-const checkboxes = document.querySelectorAll("[name='type']:checked")
-// console.log(checkboxes);
-let selectedPoke = []
-checkboxes.forEach((box) => {
-  selectedPoke.push(box.value);
-});
+  const checkboxes = document.querySelectorAll("[name='type']:checked");
+  // console.log(checkboxes);
+  let selectedPoke = [];
+  checkboxes.forEach((box) => {
+    selectedPoke.push(box.value);
+  });
 
-let filteredPoke = PokedexData.filter((item) => {
-  if (selectedPoke.includes(item.type) || selectedPoke.includes("all")) {
-    return item;
-  }
-});
+  let filteredPoke = PokedexData.filter((item) => {
+    if (selectedPoke.includes(item.type) || selectedPoke.includes("all")) {
+      return item;
+    }
+  });
   renderPoke(filteredPoke);
 });
 
@@ -129,6 +129,29 @@ const renderPoke = (array) => {
         Type: ${pokemon.type} \n`;
     let img = document.createElement("img");
     img.setAttribute("src", pokemon.url);
+    // if (pokemon.type === "fire") {
+    //   li.classList.add("fire");
+    // }
+    switch (pokemon.type) {
+      case "fire":
+        li.classList.add("fire");
+        break;
+      case "grass":
+        li.classList.add("grass");
+        break;
+      case "electric":
+        li.classList.add("electric");
+        break;
+      case "psychic":
+        li.classList.add("psychic");
+        break;
+      case "water":
+        li.classList.add("water");
+        break;
+      case "normal":
+        li.classList.add("normal");
+        break;
+    }
     pokeList.append(li);
     li.append(img);
   });
@@ -136,37 +159,36 @@ const renderPoke = (array) => {
 
 // Skapa funktionalitet för att lägga till pokemons med ny data
 
-{/* <input type="text" placeholder="name" id="pokeName">
+{
+  /* <input type="text" placeholder="name" id="pokeName">
 <input type="number" placeholder="height" id="pokeHeight">
 <input type="number" placeholder="weight" id="pokeWeight">
-<input type="text" placeholder="url" id="pokePic"> */}
+<input type="text" placeholder="url" id="pokePic"> */
+}
 
-const addBtn = document.querySelector("#addBtn"); 
+const addBtn = document.querySelector("#addBtn");
 
 addBtn.addEventListener("click", () => {
-
-const pokeName = document.querySelector("#pokeName").value; 
-const pokeHeight = document.querySelector("#pokeHeight").value; 
-const pokeWeight = document.querySelector("#pokeWeight").value; 
-const pokePic = document.querySelector("#pokePic").value; 
-const pokeType = document.querySelector("#pokeType").value; 
-
+  const pokeName = document.querySelector("#pokeName").value;
+  const pokeHeight = document.querySelector("#pokeHeight").value;
+  const pokeWeight = document.querySelector("#pokeWeight").value;
+  const pokePic = document.querySelector("#pokePic").value;
+  const pokeType = document.querySelector("#pokeType").value;
 
   let newPokemon = {
     name: pokeName,
     height: pokeHeight,
     weight: pokeWeight,
     type: pokeType,
-    url: pokePic
-  }
+    url: pokePic,
+  };
 
   if (newPokemon.url === "") {
-    newPokemon.url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png";
+    newPokemon.url =
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png";
   }
 
-  PokedexData.push(newPokemon); 
+  PokedexData.push(newPokemon);
 
-  alert("Pokemon added!"); 
-
-
-})
+  alert("Pokemon added!");
+});
