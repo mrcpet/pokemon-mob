@@ -8,6 +8,47 @@ body {
 
 
 h1 {
+
+  text-decoration: underline;
+  text-align: center;
+}
+html {
+  font-family: monospace;
+}
+button {
+  font-family: monospace;
+}
+#pokeList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#pokeList img {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.fire {
+  color: red;
+}
+.grass {
+  color: lightgreen;
+}
+.electric {
+  color: yellow;
+}
+.psychic {
+  color: purple;
+}
+.water {
+  color: lightblue;
+}
+.normal {
+  color: black;
+  }
+h1 {
   font-family: "Press Start 2P";
   color: darkblue; 
 }
