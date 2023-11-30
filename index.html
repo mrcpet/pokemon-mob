@@ -27,7 +27,23 @@
     <input type="checkbox" name="type" id="normal" value="normal" />
     <label for="normal">Normal</label>
     <h2>Våra pokemons</h2>
+
+    <input type="text" placeholder="name" id="pokeName">
+    <input type="number" placeholder="height" id="pokeHeight">
+    <input type="number" placeholder="weight" id="pokeWeight">
+    <input type="text" placeholder="url" id="pokePic">
+    <select id="pokeType">
+      <option disabled selected></option>
+      <option value="grass">Grass</option>
+      <option value="fire">Fire</option>
+      <option value="electric">Electric</option>
+      <option value="psychic">Psychic</option>
+      <option value="water">Water</option>
+      <option value="normal">Normal</option>
+    </select>
+
+    <button id="addBtn">Add Pokemon</button>
     <ul id="pokeList"></ul>
-    <img src="" alt="" />
+
   </body>
 </html>
