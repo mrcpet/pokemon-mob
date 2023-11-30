@@ -5,7 +5,7 @@ body {
   height: 100vh;
   background: rgb(10,40,95);
   background: linear-gradient(180deg, rgba(10,40,95,0.8532763532763533) 0%, rgba(0,117,190,0.8575498575498576) 15%, rgba(213,161,0,0.8532763532763533) 83%);
-
+}
 
 h1 {
 
