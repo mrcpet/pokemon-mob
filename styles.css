@@ -1,11 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   height: 100vh;
   background: rgb(10,40,95);
   background: linear-gradient(180deg, rgba(10,40,95,0.8532763532763533) 0%, rgba(0,117,190,0.8575498575498576) 15%, rgba(213,161,0,0.8532763532763533) 83%);
-}
+
 
 h1 {
-  text-decoration: underline;
+  font-family: "Press Start 2P";
+  color: darkblue; 
+}
+
+
+.inputText {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: 0px; 
+  height: 30px; 
+  padding: 10px; 
+  padding-left: 20px; 
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.inputText:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+.inputText::placeholder {
+  color: white; 
+}
+
+#addBtn {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: none; 
+  height: 40px;
+  padding: 20px; 
+  margin-top: 0px; 
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px; 
+}
+
+#addBtn:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+#pokeType {
+  border-radius: 20px;
+  background-color: darkorange;
+  color: white; 
+  border: none; 
+  height: 40px;
+  padding: 20px; 
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+#pokeType:hover {
+  color: darkorange; 
+  background-color: antiquewhite;
+}
+
+h2 {
+
+  font-family: 'Courier New', Courier, monospace;
+  color: darkorange; 
+  text-decoration: wavy overline;
+  background-color: antiquewhite;
 }
 
 .pokeBtn {
